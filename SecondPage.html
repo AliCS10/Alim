@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم البطاقات</title>
+    
+    <!-- رابط Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- رابط Font Awesome الصحيح -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, black, #1f1457, #23951f);
+            color: white;
+            text-align: right;
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        .card {
+            width: 300px;
+            height: 500px;
+            background-color: #f8f9fa;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            background-color: #330eea;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn i {
+            font-size: 20px;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: #220acb;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center gap-4">
+        <div class="col-md-3">
+            <div class="card shadow text-center">
+                <h3 class="text-start" style="margin-left: 70px;">نظم التشغيل</h3>
+                <p class="text-start" style="margin-left: 70px; font-size: 30px;">المادة المسجلة</p>
+                <button class="btn btn-primary w-100">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- مكتبة Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
