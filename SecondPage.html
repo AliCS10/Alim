@@ -95,8 +95,7 @@
                   </h3>
 
                   <p style="color: dimgrey; margin-top: -50px;">
-                    الفصل الثاني
-                  </p >
+                    الفصل الثاني </p >
                      
                   <a href="3Page.html" class="btn btn-primary w-100">
                     <i class="fa-solid fa-play"></i>
@@ -114,3 +113,219 @@
 
 </body>
 </html>
+
+
+<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم البطاقات مع صوت</title>
+    
+    <
+    !-- رابط Bootstrap --
+     
+    
+    >
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+      rel="stylesheet"
+    >
+    
+    <
+    
+    !-- رابط Font Awesome --
+     
+    
+    
+    >
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            background: linear-gradient(135deg, black, #1f1457, #23951f);
+            color: white;
+            text-align: right;
+            height: 100vh;
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        .card {
+            width: 300px;
+            height: 500px;
+            background-color: rgb(47, 178, 111);
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* تصميم الزر */
+        .btn {
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn i {
+            font-size: 20px;
+            color: white;
+        }
+
+        /* اللون الافتراضي للزر */
+        .btn-primary {
+            background-color: #330eea;
+        }
+
+        /* عند تمرير الماوس */
+        .btn-primary:hover {
+            background-color: #220acb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center gap-4">
+            <div class="col-md-3">
+                <div class="card shadow text-center" style="position: relative;">
+                    <img
+                      src="https://m.media-amazon.com/images/I/81IHziYwwaL._AC_UF1000,1000_QL80_.jpg"
+                      alt="صورة"
+                      style="
+                        width: 200px;
+                        height: 200px;
+                        margin: 10px auto 0;
+                        display: block;
+                        border-radius: 10px;
+                      "
+                    >
+                    
+                    <h3 
+                      class="d-flex justify-content-between align-items-center" 
+                      style="
+                        margin: 20px 0 0 30px; 
+                        margin-left: 54px; 
+                        font-size: 20px;
+                      "
+                    >
+                      مادة نظم التشغيل
+                      <i
+                        class="fa-solid fa-heart"
+                        style="
+                          font-size: 20px;
+                          color: rgb(230, 127, 11);
+                        "
+                      ></i>
+                    </h3>
+
+                    <p 
+                      style="
+                        color: dimgrey; 
+                        margin-top: -50px;
+                      "
+                    >
+                      الفصل الثاني
+                    </p>
+                     
+                    <
+                    !-- عند الضغط على هذا الزر، سيتم نطق النص ثم التحويل إلى صفحة 3Page.html --
+                    
+                    
+                    >
+                    <a 
+                      href="3Page.html" 
+                      class="btn btn-primary w-100" 
+                      onclick="playTtsBeforeRedirect(event)"
+                    >
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <
+    
+    !-- مكتبة Bootstrap JS --
+    >
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <script>
+      function playTtsBeforeRedirect(e) {
+        // منع المتصفح من الانتقال مباشرة
+        e.preventDefault();
+
+        // النص الذي تريد نطقه
+        const text = `
+        السلام عليكم. اليوم سنشرح مادة نظم التشغيل، 
+        حيث إن نظام التشغيل هو برنامج يدير الموارد في الحاسوب.
+        يقوم بتنسيق عمل الأجهزة والبرمجيات لضمان التفاعل السلس 
+        بين المستخدم والجهاز.
+        
+        المهام الرئيسية لنظام التشغيل:
+        1. إدارة العمليات: تنظيم وتنفيذ العمليات في الجهاز.
+        2. إدارة الذاكرة: تخصيص وإدارة الذاكرة بين العمليات.
+        3. إدارة الملفات: حفظ وتنظيم الملفات والمجلدات.
+        4. إدارة الأجهزة: التحكم في الأجهزة الطرفية مثل الطابعة والفأرة.
+        `;
+
+        // إنشاء كائن SpeechSynthesisUtterance
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "ar-SA";
+
+        // تشغيل النطق
+        window.speechSynthesis.speak(utterance);
+
+        // عند انتهاء النطق، الانتقال للصفحة
+        utterance.onend = () => {
+          window.location.href = "3Page.html";
+        };
+      }
+    </script>
+
+</body>
+</html>
+-------------------------------------------------
